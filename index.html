@@ -5,11 +5,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        * {
+            font-family: sans-serif;
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        nav {
+            width: 100%;
+            height: fit-content;
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, 1);
+        }
+
+        nav>.brand-logo {
+            width: 20%;
+            display: inline-block;
+            text-align: center;
+            padding: 20px 0px;
+        }
+
+        nav>.brand-logo>span {
+            font-weight: bolder;
+            color: black;
+        }
+
+        nav>.menu {
+            width: 28%;
+            display: inline-block;
+            text-align: start;
+        }
+
+        nav>.menu>ul {
+            list-style: none;
+        }
+
+        nav>.menu>ul>li {
+            display: inline-block;
+            padding: 10px 20px;
+            color: rgba(0, 0, 0, 0.75);
+            cursor: pointer;
+        }
+
+        nav>.menu>ul>li:hover {
+            cursor: pointer;
+            color: black;
+            font-weight: bold;
+        }
+
+        nav>.search {
+            width: 50%;
+            display: inline-block;
+            text-align: end;
+        }
+
+        nav>.search>form {
+            width: fit-content;
+            border-radius: 30px;
+
+        }
+
+        nav>.search>form>input[name="query"] {
+            outline: none;
+            border: none;
+            height: 40px;
+            border-radius: 30px 0px 0px 30px;
+            padding: 0px 20px;
+            border-left: 1px solid rgba(0, 0, 0, 1);
+            border-bottom: 1px solid rgba(0, 0, 0, 1);
+            border-top: 1px solid rgba(0, 0, 0, 1);
+        }
+
+
+        nav>.search>form>button[type="submit"] {
+            outline: none;
+            border: none;
+            height: 40px;
+            border-radius: 0px 30px 30px 0px;
+            background-color: black;
+            color: white;
+            padding: 0px 20px;
+            cursor: pointer;
+        }
+
+        @media(width < 768px) {
+
+            nav>.menu,
+            nav>.brand-logo,
+            nav>.search {
+                width: 100%;
+                display: block;
+                text-align: left;
+            }
+
+            nav>.brand-logo>span {
+                padding: 0px 20px;
+            }
+
+            nav>.menu>ul>li {
+                display: block;
+            }
+
+            nav>.search>form {
+                width: 100%;
+                padding: 20px 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    
+    <nav>
+        <div class="brand-logo">
+            <span>Daber</span>
+        </div>
+        <div class="menu">
+            <ul>
+                <li>Home</li>
+                <li>Service</li>
+                <li>Feature</li>
+                <li>Blog</li>
+                <li>Pricing</li>
+            </ul>
+        </div>
+        <div class="search">
+            <form action="#">
+                <input placeholder="Cari Produk" type="text" name="query">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
 </body>
 
 </html>
